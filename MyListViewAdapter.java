@@ -12,7 +12,6 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class MyListViewAdapter extends BaseAdapter
 {
@@ -56,7 +55,7 @@ public class MyListViewAdapter extends BaseAdapter
         String ipAndName = (String)getItem(position);
         if (!ipAndName.contains("\n"))
         {
-            ipAndName = "User " + new Random().nextInt() + '\n' + ipAndName;
+            ipAndName = "User" + '\n' + ipAndName;
             content.set(position, ipAndName);
         }
 
